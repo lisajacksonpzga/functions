@@ -1,13 +1,14 @@
 import random
 
 def pluck_random(n, num_list):
-    if n >= len(my_list):
-        return my_list
+    if n >= len(num_list):
+        return num_list.copy()
     else:
-        random_elements = random.sample(my_list, n)
+        random_elements = random.sample(num_list, n)
         for element in random_elements:
-            my_list.remove(element)
+            num_list.remove(element)
         return random_elements
+
 
 
 num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
